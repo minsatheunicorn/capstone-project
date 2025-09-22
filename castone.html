@@ -23,7 +23,7 @@
                 background-color:lavender ;
             }
             .topnav a.active{
-                background-color aquamarine;
+                background-color :Aquamarine;
             }
     </style>
 </head>
@@ -34,5 +34,26 @@
         <a href="#gallery">gallery</a>
         <a href="#contanct us">contact us</a>
     </div>
+    <section>
+        <img class="myslides" style="height:500px;width:800px;"src="https://th.bing.com/th/id/OIP.2FGsSJ4B6OGLfUHvFB0sMQHaEK?w=312&h=200&c=12&rs=1&o=6&pid=23.1">
+        <img class="myslides" style="height:500px;width:800px;"src="https://th.bing.com/th/id/OIP.Yfna8pJlQME7Q6e0nE2b-QHaLL?w=202&h=305&c=7&r=0&o=5&pid=1.7">
+        <img class="myslides" style="height:500px;width:800px;"src="https://tse1.mm.bing.net/th/id/OIP.c_kZAipweRfM__GTHtFYyQHaNK?rs=1&pid=ImgDetMain&o=7&rm=3">
+            
+    </section>
+    <script>
+        var myindex=0
+        carousel()
+        function carousel(){
+            var i
+            var x=document.getElementsByClassName("myslides")
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none"
+            }
+            myindex++
+            if(myindex>x.length){myindex=1}
+            x[myindex-1].style.display="block"
+            setTimeout(carousel,3000)
+        }
+    </script>
 </body>
 </html>
